@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Landing Page</title>
+    <style>
+        body {
+            text-align: center;
+            background-image: url("https://static.vecteezy.com/system/resources/previews/003/303/295/non_2x/mountains-background-game-vector.jpg");
+            background-size:cover;
+            background-repeat: no-repeat;
+        }
+       .container {
+            display:flex;
+            flex-direction: column;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #f8f4fb90;
+            border: 1px solid #dddddd;
+            box-shadow: 0 0 10px rgba(238, 9, 215, 0.423);
+        }
+       .mode-button {
+            background-color: #6abfde;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+            height:30px;
+        }
+       .mode-button:hover {
+            background-color: #c489e4;
+        }
+       .mode-icon {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>RICOCHET RAMBLE</h1>
+        <p>Choose your game mode:</p>
+        <button class="mode-button" onclick="window.location.href='./NormalMode/chess.html'">
+             NORMAL MODE
+        </button>
+        <button class="mode-button" onclick="window.location.href='./HackerMode/chess1.html'">
+            HACKER MODE
+        </button>
+        <button class="mode-button" onclick="window.location.href='./HackerPlusMode/restart.html'">
+            HACKER++ MODE
+        </button>
+    </div>
+</body>
+</html>
+
