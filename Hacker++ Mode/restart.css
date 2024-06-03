@@ -1,0 +1,340 @@
+body{
+    background-image: linear-gradient(to right,#7af6c0d2,#a126eec1);
+}
+#gameboard {
+    width: 413px; 
+    height: 413px; 
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute; 
+    z-index: 0; 
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition:width 0.4s;
+    transition:height 0.4s; 
+    background-image: linear-gradient(to right,#7af6c0d2,#be85e1c1);
+}
+.square{
+    height:50px;
+    width:50px;
+    border:1px solid #a126ee95;
+    border-collapse: collapse;
+    position:static;
+    z-index: -5;
+    transition:width 0.4s;
+    transition:height 0.4s;
+}
+.square svg{
+    height: 40px;
+    width:40px;
+    margin:5px;
+    position: relative;
+    transition:width 0.4s;
+    transition:height 0.4s;
+    z-index:-1;
+}
+
+.historyA {
+    display:none
+}
+    
+.historyB {
+    display: none;
+}
+.displayHistory{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        font-size: medium;
+        z-index: 1000;
+        overflow: scroll;
+}
+.displayHistory p{
+    margin: 4px;
+}
+.green{
+    fill: #078362;
+    border-top-color:  #078362;
+    border-left-color: #078362;
+}
+.green line{
+    stroke:#078362;
+}
+.black{
+    fill: black;
+    border-top-color: #000000;
+    border-left-color: #000000;
+}
+.path{
+    background-color: rgb(231, 140, 225);
+}
+.bullet{
+        position:absolute;
+        display: block;
+        height: 15px;
+        width: 15px;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+        transition: top 0.2s ease, left 0.2s ease;
+    }
+#displayBullet{
+        display:block;
+    }
+.greenb{
+        background-color: #6a0583;
+        display: none;
+    }
+.blackb{
+        background-color: black;
+        display: none;
+    }
+.button{
+        align-items: center;
+        background-image: linear-gradient(135deg, #c60063c2,#5f0484);
+        border: 0;
+        border-radius: 5px;
+        box-sizing: border-box;
+        color: #fff;
+        cursor: pointer;
+        display: flex;
+        font-size: 10px;
+        font-weight: 700;
+        height: 30px;
+        justify-content: center;
+        letter-spacing: .4px;
+        line-height: 1;
+        max-width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 3px;
+        text-transform: uppercase;
+        margin:5px;
+      }.reset,.pause,.undo,.redo,.HistoryA,.HistoryB{
+          background-image: linear-gradient(135deg, #c60063c2,#5f0484);
+          border: 0;
+          border-radius: 5px;
+          box-sizing: border-box;
+          color: #fff;
+          cursor: pointer;
+          font-size: 10px;
+          font-weight: 700;
+          height: 30px;
+          width:100px;
+          letter-spacing: .4px;
+          line-height: 1;
+          max-width: 100%;
+          padding-top: 3px;
+          text-transform: uppercase;
+          margin:5px;
+        }
+        .spells{
+            display: flex;
+            justify-content:center;
+            margin:auto;
+            position:absolute;
+            top:8px;
+            left: 320px;
+
+
+  }
+    #spellSelectA,#spellSelectB
+        {
+            background-image: linear-gradient(135deg, #c60063c2,#5f0484);
+            border: 0;
+            border-radius: 5px;
+            box-sizing: border-box;
+            color: #fff;
+            cursor: pointer;
+            font-size: 10px;
+            font-weight: 700;
+            height: 30px;
+            width:100px;
+            letter-spacing: .4px;
+            line-height: 1;
+            max-width: 100%;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 3px;
+            text-transform: uppercase;
+            margin:5px;
+          }
+          #spellSelectA option,#spellSelectB option{
+            background-color: #b795f3;
+          }
+.restart{
+          animation: fadeIn 1s ease-in-out;
+          color: white;
+          background-color: rgba(0, 0, 0, 0.8);
+          display:block;
+          margin: 5px;
+          width:100px;
+          height:50px;
+          font-size: medium;
+          font-weight: 700;
+        }
+.back{
+          animation: fadeIn 1s ease-in-out;
+          color: white;
+          background-color: rgba(0, 0, 0, 0.8);
+          display:block;
+          width:100px;
+          height:50px;
+          font-size: small;
+          font-weight: 700;
+        }
+ .button-container{
+          width:400px;
+          height:40px;
+          margin:auto;
+          display: flex;
+          position:absolute;
+          justify-content:center;
+          top:90%;
+          left:50%;
+          transform: translate(-50%,0);
+      }
+.controls{
+          display: flex;
+          justify-content:center;
+          margin:auto;
+          position:relative;
+          left:100px;
+      }
+#p{
+          display: block;
+          width: 100px;
+          height:30px;
+          position: relative;
+          margin: auto;
+          font-weight:700;
+          color:#ffffff;
+          text-shadow: 0 0 10px #b2d72c;
+          font-size: larger;
+          margin-top:0;
+      }
+#winner-message {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color: rgba(0, 0, 0, 0.8);
+          color: white;
+          font-size: 1.5em;
+          z-index: 1000;
+      }
+      
+.timer{
+          position: relative;
+          margin: auto;
+          display: flex;
+          width:400px;
+          height:40px;
+          justify-content: center;
+          align-items: center;
+      }
+.timer-A{
+          color: #078362;
+          font-weight:700;
+          font-size: medium;
+      }
+.timer-B{
+          color:black;
+          font-weight:700;
+          font-size:medium;
+      }
+img{
+          display: block;
+          width:30px;
+          height:30px;
+      }
+      @media (max-width:550px),(max-height:600px) {
+        .bullet{
+            height:10px;
+            width: 10px;    
+            top:18px;
+            left:18px;
+        }
+        #winner-message{
+            font-size:smaller;
+        }
+        #gameboard{
+            width:314px;
+            height:314px;
+        }
+        .square{
+            width:37.5px;
+            height:37.5px;
+        }
+        .square svg{
+            width:27.5px;
+            height:27.5px;
+        }
+        .timer{
+            position: relative;
+            margin: auto;
+            display: flex;
+            width:400px;
+            height:20px;
+            justify-content: center;
+            align-items: center;
+        }
+  .timer-A{
+            color: #078362;
+            font-weight:700;
+            font-size: small;
+        }
+  .timer-B{
+            color:black;
+            font-weight:700;
+            font-size:small;
+        }
+    #p{
+            display: block;
+            width: 100px;
+            height:30px;
+            position: relative;
+            margin: auto;
+            font-weight:700;
+            color:#ffffff;
+            text-shadow: 0 0 10px #b2d72c;
+            font-size: small;
+            margin-top:0;
+        }
+        .controls{
+            left:0;
+        }
+        .reset,.pause,.undo,.redo,.HistoryA,.HistoryB{
+           width: 85px;
+           font-size: 9px;
+           text-align: center;
+           padding-left: 20px;
+           padding-right: 20px;
+          }
+          .spells{
+             display: flex;
+             justify-content:center;
+             margin:auto;
+             position:relative;
+             top:0;
+             left: 0;
+   }
+   #spellSelectA,#spellSelectB{
+    width: 85px;
+    font-size: 8px;
+    text-align: center;
+   }
+    }

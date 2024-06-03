@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chess</title>
+    <link rel="stylesheet" href="restart.css">
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.3.0/math.min.js></script>
+</head>
+<body>
+    <div class="historyA"><p>MOVES OF A</p></div>
+    <div class="historyB"><P>MOVES OF B</P></div>
+    <div class="controls">
+        <button class="HistoryA">MOVESA</button>
+        <button class="reset">RESET</button>
+        <button class="pause">PAUSE</button>
+        <button class="undo">UNDO</button>
+        <button class="redo">REDO</button>
+        <button class="HistoryB">MOVESB</button>
+    </div>
+    <div class="spells">
+        <select id="spellSelectA">
+            <option value=""selected>SpellA</option>
+            <option value="PassThrough" disabled>PassThrough</option>
+            <option value="Skip" disabled>Skip</option>
+            <option value="Freeze" disabled>Freeze</option>
+        </select>
+        <select id="spellSelectB">
+            <option value=""selected>SpellB</option>
+            <option value="PassThrough" disabled>PassThrough</option>
+            <option value="Skip" disabled>Skip</option>
+            <option value="Freeze" disabled>Freeze</option>
+        </select>
+    </div>
+    <div class="timer">
+        <div class="timer-A"></div>
+        <img src="https://png.pngtree.com/png-vector/20220715/ourmid/pngtree-hourglass-vector-png-image_5946419.png" alt="">
+        <div class="timer-B"></div>
+    </div>
+    <p id="p">TURN <span id="player">A</span></p>
+    <div id="gameboard"></div>
+    <div class="button-container"></div>
+    <script src="restart1.js"></script>
+    <script src="restart.js"></script>
+</body>
+</html>

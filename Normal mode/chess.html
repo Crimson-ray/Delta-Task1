@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chess</title>
+    <link rel="stylesheet" href="chess.css">
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.3.0/math.min.js></script>
+</head>
+<body>
+    <div class="controls">
+        <button class="reset">RESET</button>
+        <button class="pause">PAUSE</button>
+    </div>
+    <div class="timer">
+        <div class="timer-A"></div>
+        <img src="https://png.pngtree.com/png-vector/20220715/ourmid/pngtree-hourglass-vector-png-image_5946419.png" alt="">
+        <div class="timer-B"></div>
+    </div>
+    <p>TURN <span id="player">A</span></p>
+    <div id="gameboard"></div>
+    <div class="button-container"></div>
+    <script src="pieces.js"></script>
+    <script src="normal.js"></script>
+</body>
+</html>
