@@ -255,7 +255,7 @@ img{
         height:27.5px;
     }
     .reset,.pause,.undo,.redo,.HistoryA,.HistoryB{
-        width: 75px;
+        width: 70px;
         font-size: 6px;
         text-align: center;
         padding:0;
