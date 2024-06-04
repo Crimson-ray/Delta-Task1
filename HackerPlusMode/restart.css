@@ -318,8 +318,8 @@ img{
             left:0;
         }
         .reset,.pause,.undo,.redo,.HistoryA,.HistoryB{
-           width: 85px;
-           font-size: 9px;
+           width: 75px;
+           font-size: 6px;
            text-align: center;
            padding-left: 20px;
            padding-right: 20px;
@@ -333,8 +333,10 @@ img{
              left: 0;
    }
    #spellSelectA,#spellSelectB{
-    width: 85px;
-    font-size: 8px;
+    width: 75px;
+    font-size: 6px;
     text-align: center;
    }
+    body{
+        overflow:hidden;
     }
