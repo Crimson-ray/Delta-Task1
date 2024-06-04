@@ -255,17 +255,17 @@ img{
         height:27.5px;
     }
     .reset,.pause,.undo,.redo,.HistoryA,.HistoryB{
-        width: 85px;
-        font-size: 9px;
+        width: 75px;
+        font-size: 6px;
         text-align: center;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding:0;
        }
        #p{
         display: block;
         width: 100px;
         height:30px;
         position: relative;
+        left:30px;
         margin: auto;
         font-weight:700;
         color:#ffffff;
@@ -273,4 +273,6 @@ img{
         font-size: small;
         margin-top:0;
     }
+    body{
+        overflow:hidden;
 }
