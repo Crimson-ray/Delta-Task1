@@ -245,9 +245,6 @@ img{
     #gameboard{
         width:314px;
         height:314px;
-        left: 50%;
-        top: 60%;
-        transform: translate(-50%, -50%);
     }
     .square{
         width:37.5px;
