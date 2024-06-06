@@ -24,12 +24,9 @@ let shufflepiece=[
     '','','','','','','','',
     '','','',semi,ricochet,tank,titan
 ]
-const hitSound = new Audio("C:\\Users\\jd200\\Music\\bullet hit.mp3");
-const shootSound = new Audio("C:\\Users\\jd200\\Music\\canon-sound.mp3");
+const shootSound = new Audio("canon-sound.mp3");
 shootSound.preload="auto"
-const winSound = new Audio("C:\\Users\\jd200\\Music\\game-end.mp3");
-const destroy = new Audio("C:\\Users\\jd200\\Music\\Bullet destroys.mp3");
-const passBy = new Audio("C:\\Users\\jd200\\Music\\bullet pass by.mp3");
+const winSound = new Audio("game-end.mp3");
 const historyA=document.querySelector(".historyA")
 const historyB=document.querySelector(".historyB")
 let movesOfA=[]
